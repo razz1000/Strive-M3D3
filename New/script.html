@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const options = {
+        method: "GET",
+
+        headers: {
+          Authorization:
+            "63492ad6f91700001000001c24c1792b0394844aefc6c1957db294b",
+        },
+      };
+
+      fetch("https://api.pexels.com/v1/search?query=ocean", options)
+        .then((response) => response.json())
+        .then((nature) => {
+          console.log(nature.photos);
+        })
+
+        .catch((err) => console.error(err));
+    </script>
+  </body>
+</html>
